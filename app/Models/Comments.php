@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Comments extends Model
 {
     use HasFactory;
+    public function post()
+    {
+        $this->belongsTo(Post::class);
+    }
 }
