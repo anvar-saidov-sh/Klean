@@ -23,7 +23,9 @@
                 @foreach ($posts as $post)
                 <div class="col-lg-4 col-md-6 mb-5">
                     <div class="position-relative mb-4">
-                        <img class="img-fluid rounded w-100" src="{{asset('storage/'.$post->photo)}}" alt="It is image">
+                        @if ($post->photo != null)
+                            <img class="img-fluid rounded w-100" src="{{asset('storage/'.$post->photo)}}">
+                        @endif
                         <div class="blog-date">
                             <h4 class="font-weight-bold mb-n1">01</h4>
                             <small class="text-white text-uppercase">Jan</small>
