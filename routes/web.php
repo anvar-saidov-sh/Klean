@@ -22,7 +22,7 @@ Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 // Route::resource('comments', CommentController::class);
 // Route::resource('users', UserController::class);
 
-Route::resource('posts', PostController::class , [
+Route::resources([
     'posts' => PostController::class,
     'comments' => CommentController::class,
     'users' => UserController::class,

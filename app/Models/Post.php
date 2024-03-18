@@ -18,9 +18,9 @@ class Post extends Model
     ];
     // protected $guarded = ['id'];
     public function user(){
-        return $this->belongsTo(User::class);
+        return $this->hasMany(Comment::class);
     }
     public function comments() {
-        return $this->hasMany(Comment::class);
+        return $this->belongsTo(User::class);
     }
 }
