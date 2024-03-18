@@ -17,13 +17,13 @@ Route::get('/project', [PageController::class, 'project'])->name('project');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 
 
-Route::resource('posts', PostController::class);
-Route::resource('comments', CommentController::class);
-Route::resource('comments', CommentController::class);
-Route::resource('users', UserController::class);
+// Route::resource('posts', PostController::class);
+// Route::resource('comments', CommentController::class);
+// Route::resource('comments', CommentController::class);
+// Route::resource('users', UserController::class);
 
-// Route::resource([
-//     'posts' => PostController::class,
-//     'comments' => CommentController::class,
-//     'users' => UserController::class,
-// ]);
+Route::resource('posts', PostController::class , [
+    'posts' => PostController::class,
+    'comments' => CommentController::class,
+    'users' => UserController::class,
+]);
