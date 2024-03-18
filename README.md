@@ -70,5 +70,6 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 echo("Hello")
 ```
 ```php
-{{ is_countable($post->comments) ? count($post->comments) : 0 }} // count function not working even though there are comments
+{{ is_countable($post->comments) ? count($post->comments) : 0 }} 
+// count function not working even though there are comments
 ```
