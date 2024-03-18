@@ -79,12 +79,13 @@
 
                     <div class="bg-light rounded p-5">
                         <h3 class="mb-4 section-title">Leave a comment</h3>
-                        <form action="" method="POST">
+                        <form action={{route('comments.store')}} method="POST">
                             @csrf
                             <div class="form-group">
-                                <label for="message">Message *</label>
-                                <textarea id="message" cols="30" rows="5" class="form-control"></textarea>
+                                <label for="body">Message *</label>
+                                <textarea id="body" name="body" cols="30" rows="5" class="form-control"></textarea>
                             </div>
+                            <input type="hidden" value={{$post->id}} name="post_id">
                             <div class="form-group mb-0">
                                 <input type="submit" value="Leave Comment" class="btn btn-primary">
                             </div>
