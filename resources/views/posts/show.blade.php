@@ -44,7 +44,7 @@
                     </div>
 
                     <div class="mb-5">
-                        <h3 class="mb-4 section-title">{{ $post->comments ? 'hello' : 'hell' }} Comments</h3>
+                        <h3 class="mb-4 section-title">{{ is_countable($post->comments) ? count($post->comments) : 0 }} Comments</h3>
                         {{-- <div class="media mb-4">
                             <img src="/img/user.jpg" alt="Image" class="img-fluid rounded-circle mr-3 mt-1"
                                 style="width: 45px;">
