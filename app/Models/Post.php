@@ -2,10 +2,9 @@
 
 namespace App\Models;
 
-use Egulias\EmailValidator\Parser\Comment;
+
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Post extends Model
 {
@@ -18,9 +17,9 @@ class Post extends Model
     ];
     // protected $guarded = ['id'];
     public function user(){
-        return $this->hasMany(Comment::class);
+        return $this->belongsTo(User::class);
     }
     public function comments() {
-        return $this->belongsTo(User::class);
+        return $this->hasMany(Comment::class);
     }
 }
