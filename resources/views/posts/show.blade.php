@@ -44,8 +44,8 @@
                     </div>
 
                     <div class="mb-5">
-                        <h3 class="mb-4 section-title">{{ $post->comments }}  Comments</h3>
-                        {{-- <div class="media mb-4">
+                        <h3 class="mb-4 section-title">{{ $post->comments()->count() }}  Comments</h3>
+                        <div class="media mb-4">
                             <img src="/img/user.jpg" alt="Image" class="img-fluid rounded-circle mr-3 mt-1"
                                 style="width: 45px;">
                             <div class="media-body">
@@ -55,18 +55,18 @@
                                     ipsum diam tempor sit.</p>
                                 <button class="btn btn-sm btn-light">Reply</button>
                             </div>
-                        </div> --}}
+                        </div>
                     </div>
 
                     <div class="bg-light rounded p-5">
                         <h3 class="mb-4 section-title">Leave a comment</h3>
-                        <form action={{route('comments.store')}} method="POST">
+                        <form action="{{route('comments.store')}}" method="POST">
                             @csrf
                             <div class="form-group">
                                 <label for="body">Message *</label>
-                                <textarea id="body" name="body" cols="30" rows="5" class="form-control"></textarea>
+                                <textarea  name="body" cols="30" rows="5" class="form-control"></textarea>
                             </div>
-                            <input type="hidden" value={{$post->id}} name="post_id">
+                            <input type="hidden" value="{{$post->id}}" name="post_id">
                             <div class="form-group mb-0">
                                 <input type="submit" value="Leave Comment" class="btn btn-primary">
                             </div>

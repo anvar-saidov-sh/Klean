@@ -25,5 +25,5 @@ Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 Route::resources([
     'posts' => PostController::class,
     'comments' => CommentController::class,
-    'users' => UserController::class,
+    'users' => UserController::class
 ]);
