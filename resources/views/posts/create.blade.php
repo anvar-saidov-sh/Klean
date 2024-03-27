@@ -17,14 +17,14 @@
                             <p class="help-block text-danger">{{$message}}</p>
                         @enderror
                     </div>
-                    <div class="control-group">
+                    <div class="control-group m-4">
                         <select name="category_id">
                             @foreach ($categories as $category)
-                                <option value="{{$category_id}}">{{$category->name}}</option>
+                                <option value="{{$category->id}}">{{$category->name}}</option>
                             @endforeach
                         </select>
                     </div>
-                    <div class="control-group"> 
+                    <div class="control-group mt-4 mb-4"> 
                         {{-- required="required" data-validation-required-message="Please enter a title"
                          required="required" data-validation-required-message="Please enter your short content"
                           required="required" data-validation-required-message="Please enter your content" --}}
