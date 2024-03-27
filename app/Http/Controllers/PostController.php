@@ -33,6 +33,8 @@ class PostController extends Controller
         }
         // dd($request, $path, $name);
         $post = Post::create([
+            'user_id' => 1,
+            'category_id'=> $request->category_id,
             'title' => $request->title,
             'short_content' => $request->short_content,
             'content' => $request->content,
