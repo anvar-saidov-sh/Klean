@@ -17,6 +17,13 @@
                             <p class="help-block text-danger">{{$message}}</p>
                         @enderror
                     </div>
+                    <div class="control-group">
+                        <select name="category_id">
+                            @foreach ($categories as $category)
+                                <option value="{{$category_id}}">{{$category->name}}</option>
+                            @endforeach
+                        </select>
+                    </div>
                     <div class="control-group"> 
                         {{-- required="required" data-validation-required-message="Please enter a title"
                          required="required" data-validation-required-message="Please enter your short content"
@@ -26,6 +33,7 @@
                             <p class="help-block text-danger">{{$message}}</p>
                         @enderror
                     </div>
+
                     <div class="control-group">
                         <textarea class="form-control p-4" rows="3" name="short_content" placeholder="Short content">{{old('short_content') }}</textarea>
                         @error('short_content')
