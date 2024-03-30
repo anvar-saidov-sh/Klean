@@ -24,7 +24,7 @@
                 <div class="col-lg-4 col-md-6 mb-5">
                     <div class="position-relative mb-4">
                         @if ($post->photo != null)
-                            <img class="img-fluid rounded w-100" src="{{asset('storage/'.$post->photo)}}">
+                            <img class="img-fluid rounded w-100" src={{asset('storage/'.$post->photo)}}>
                             {{-- <p>{{$post->photo}}</p> --}}
                         @endif
                         <div class="blog-date">
