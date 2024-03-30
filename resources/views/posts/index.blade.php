@@ -24,8 +24,7 @@
                 <div class="col-lg-4 col-md-6 mb-5">
                     <div class="position-relative mb-4">
                         @if ($post->photo != null)
-                            <img class="img-fluid rounded w-100" src={{asset('storage/'.$post->photo)}}>
-                            {{-- <p>{{$post->photo}}</p> --}}
+                            <img class="img-fluid  w-100" src={{asset('storage/'.$post->photo)}}>
                         @endif
                         <div class="blog-date">
                             <h4 class="font-weight-bold mb-n1">01</h4>
@@ -45,28 +44,6 @@
                 @endforeach
                 
                 {{ $posts->links()}}
-
-                {{-- <div class="col-12">
-                    <nav aria-label="Page navigation">
-                      <ul class="pagination pagination-lg justify-content-center mb-0">
-                        <li class="page-item disabled">
-                          <a class="page-link"  aria-label="Previous" >
-                            <span aria-hidden="true">&laquo;</span>
-                            <span class="sr-only">Previous</span>
-                          </a>
-                        </li>
-                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                          <a class="page-link" href="#" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                            <span class="sr-only">Next</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </nav>
-                </div> --}}
             </div>
         </div>
     </div>
