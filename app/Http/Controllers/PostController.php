@@ -31,7 +31,7 @@ class PostController extends Controller
             $name = $request->file('photo')->getClientOriginalName();
             $path = $request->file('photo')->storeAs('post-photos', $name);
         }
-        // dd($request, $path, $name);
+        
         $post = Post::create([
             'user_id' => 1,
             'category_id'=> $request->category_id,
