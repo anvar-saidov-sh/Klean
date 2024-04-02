@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 
@@ -27,3 +28,13 @@ Route::resources([
     'comments' => CommentController::class,
     'users' => UserController::class
 ]);
+// Route::get('/clear', function() {
+    
+//     $exitCode = Artisan::call('config:cache');
+//     $exitCode = Artisan::call('config:clear');
+//     $exitCode = Artisan::call('cache:clear');
+//     $exitCode = Artisan::call('view:clear');
+//     $exitCode = Artisan::call('route:clear');
+//     $exitCode = Artisan::call('clear-compiled');
+//     return 'DONE'; 
+// });
