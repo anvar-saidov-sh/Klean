@@ -42,7 +42,6 @@
                         <a class="btn btn-sm btn-primary py-2" href="{{ route('posts.show', ['post' => $post->id]) }}">Read More</a>
                     </div>
                 @endforeach
-
                 {{ $posts->links() }}
             </div>
         </div>
