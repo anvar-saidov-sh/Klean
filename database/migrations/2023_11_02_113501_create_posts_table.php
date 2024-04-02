@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained();
             $table->foreignId('category_id')->constrained();
-            $table->string('photo')->nullable();
             $table->text('title');
             $table->text('content');
             $table->text('short_content');
+            $table->string('photo')->nullable();
             $table->timestamps();
         });
         
