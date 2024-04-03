@@ -24,7 +24,7 @@
                 @foreach ($posts as $post)
                     <div class="col-lg-4 col-md-6 mb-5">
                         <div class="position-relative mb-4">
-                            @if ($post->photo != null)
+                            @if ($post->photo !== null)
                                 <img class="img-fluid  w-100" src={{ asset('storage/' . $post->photo) }}>
                             @endif
                             <div class="blog-date">

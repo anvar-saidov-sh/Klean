@@ -36,8 +36,7 @@
 
                     <div class="mb-5">
                         @if ($post->photo != null)
-                            <img class="img-fluid rounded w-100 mb-4" src="{{ asset('storage/' . $post->photo) }}"
-                                alt="Image">
+                            <img class="img-fluid rounded w-100 mb-4" src={{ asset('storage/' . $post->photo) }} alt="Image">
                         @endif
                         <p>{{ $post->short_content }}</p>
                         <p>{{ $post->content }}</p>
