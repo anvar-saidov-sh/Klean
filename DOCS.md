@@ -20,3 +20,8 @@
 // with this code or ***src{{asset('storage/'.$post->photo)}}*** I cant display photo in blade format
 // In addition in create_posts migration ***string('photo')*** shown as tinyint type in database posts table
 ```
+
+
+<p>
+    I started where it works fine. So I am going to make Models Seeders and so on from the beginning
+</p>
