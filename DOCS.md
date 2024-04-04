@@ -25,3 +25,8 @@
 <p>
     I started where it works fine. So I am going to make Models Seeders and so on from the beginning
 </p>
+1.The connection between models
+    1. User model
+    2. Post model
+    3. Comment model
+    4. Category model
