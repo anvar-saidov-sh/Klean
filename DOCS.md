@@ -30,3 +30,8 @@
     2. Post model
     3. Comment model
     4. Category model
+2. Seeders & factories
+   1. Comment factory & seeder
+   2. Post factory & seeder
+   3. User factory & seeder
+   4. Category seeder
